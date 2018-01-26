@@ -1,1 +1,2 @@
-James stinks
+James is only trying his best.
+ 
