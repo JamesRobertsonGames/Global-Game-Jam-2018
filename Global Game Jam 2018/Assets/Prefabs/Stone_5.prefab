@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4606003471374454}
   - component: {fileID: 33965683030038924}
   - component: {fileID: 23821844076891438}
+  - component: {fileID: 136589776261525304}
   m_Layer: 0
   m_Name: Stone_5
   m_TagString: Untagged
@@ -35,7 +36,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1573012099276014}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -57.647144, y: 4.0203466, z: -259.2889}
+  m_LocalPosition: {x: -72.3278, y: -8.279539, z: -243.53969}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -80,3 +81,16 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1573012099276014}
   m_Mesh: {fileID: 4300000, guid: 87304714587b0084f87aad72f6e6ff19, type: 3}
+--- !u!136 &136589776261525304
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1573012099276014}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.23222542
+  m_Height: 0.74497354
+  m_Direction: 2
+  m_Center: {x: 0.040361404, y: 0.015930906, z: 0.012309372}
