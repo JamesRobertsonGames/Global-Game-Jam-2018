@@ -58,11 +58,11 @@ Material:
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _FlashRate: 50
+    - _FlashRate: 10
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _MaxDistance: 10
+    - _MaxDistance: 100
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1

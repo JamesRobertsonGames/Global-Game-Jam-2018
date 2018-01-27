@@ -108,7 +108,11 @@ public class SonarParticleSystem : SingletonMonoBehaviour<SonarParticleSystem>
     private void EmitRippleAt(ParticleCollisionEvent collisionEvent)
     {
         rippleSonar.transform.position = collisionEvent.intersection;
-        rippleSonar.transform.rotation = Quaternion.LookRotation(collisionEvent.normal);
-        rippleSonar.Emit(rippleSonar.maxParticles); // who cares?
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, collisionEvent.intersection - transform.position, out hit, Mathf.Infinity))
+        {
+            rippleSonar.transform.rotation = Quaternion.LookRotation(hit.normal);
+            rippleSonar.Emit(rippleSonar.maxParticles); // and what??? eh???
+        }
     }
 }
