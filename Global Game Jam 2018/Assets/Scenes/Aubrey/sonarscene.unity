@@ -1908,7 +1908,7 @@ MonoBehaviour:
   CollisionRadius: 10
   CollisionMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4294967295
   JumpDelay: 2
 --- !u!1 &1918348924
 GameObject:
