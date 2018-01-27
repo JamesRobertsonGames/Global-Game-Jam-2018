@@ -1,15 +1,43 @@
 fileFormatVersion: 2
-guid: de7ca52a5c27b4543bbc98af20b201eb
-timeCreated: 1516997017
+guid: 405eba5f5096f7e489fdca2f4c0aa8ad
+timeCreated: 1517058268
 licenseType: Free
 ModelImporter:
   serializedVersion: 21
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: Stone_2
+    100000: Armature
+    100002: bat
+    100004: //RootNode
+    100006: forewing.l
+    100008: forewing.r
+    100010: forewing_IK.l
+    100012: forewing_IK.r
+    100014: head
+    100016: spine
+    100018: upperspine
+    100020: wing.l
+    100022: wing.r
+    100024: wing_pole.l
+    100026: wing_pole.r
+    400000: Armature
+    400002: bat
+    400004: //RootNode
+    400006: forewing.l
+    400008: forewing.r
+    400010: forewing_IK.l
+    400012: forewing_IK.r
+    400014: head
+    400016: spine
+    400018: upperspine
+    400020: wing.l
+    400022: wing.r
+    400024: wing_pole.l
+    400026: wing_pole.r
+    4300000: bat
+    7400000: Armature|ArmatureAction
+    7400002: Armature|Fly
+    9500000: //RootNode
+    13700000: bat
   materials:
     importMaterials: 1
     materialName: 0
@@ -33,7 +61,35 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Armature|Fly
+      takeName: Armature|Fly
+      firstFrame: 0
+      lastFrame: 72
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -79,7 +135,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

@@ -1,15 +1,37 @@
 fileFormatVersion: 2
-guid: de7ca52a5c27b4543bbc98af20b201eb
+guid: a8c1243c984d13040a41bc5d1cd0a52b
 timeCreated: 1516997017
 licenseType: Free
 ModelImporter:
   serializedVersion: 21
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: Stone_2
+    100000: Stone
+    100002: Stone.001
+    100004: Stone.002
+    100006: Stone.003
+    100008: Stone.004
+    100010: //RootNode
+    400000: Stone
+    400002: Stone.001
+    400004: Stone.002
+    400006: Stone.003
+    400008: Stone.004
+    400010: //RootNode
+    2300000: Stone
+    2300002: Stone.001
+    2300004: Stone.002
+    2300006: Stone.003
+    2300008: Stone.004
+    3300000: Stone
+    3300002: Stone.001
+    3300004: Stone.002
+    3300006: Stone.003
+    3300008: Stone.004
+    4300000: Stone
+    4300002: Stone.001
+    4300004: Stone.004
+    4300006: Stone.003
+    4300008: Stone.002
   materials:
     importMaterials: 1
     materialName: 0

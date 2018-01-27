@@ -1,15 +1,51 @@
 fileFormatVersion: 2
-guid: de7ca52a5c27b4543bbc98af20b201eb
-timeCreated: 1516997017
+guid: 53e59f3112402134a94de35ae778ea02
+timeCreated: 1517047980
 licenseType: Free
 ModelImporter:
   serializedVersion: 21
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: Stone_2
+    100000: Camera
+    100002: Cave
+    100004: //RootNode
+    100006: cave2_h
+    100008: Lamp
+    100010: Point
+    100012: Sun
+    100014: tree
+    100016: tree.001
+    100018: tree.002
+    400000: Camera
+    400002: Cave
+    400004: //RootNode
+    400006: cave2_h
+    400008: Lamp
+    400010: Point
+    400012: Sun
+    400014: tree
+    400016: tree.001
+    400018: tree.002
+    2000000: Camera
+    2300000: Cave
+    2300002: cave2_h
+    2300004: tree
+    2300006: tree.001
+    2300008: tree.002
+    2300010: //RootNode
+    3300000: Cave
+    3300002: cave2_h
+    3300004: tree
+    3300006: tree.001
+    3300008: tree.002
+    3300010: //RootNode
+    4300000: cave2_h
+    4300002: Cave
+    4300004: tree.002
+    4300006: tree.001
+    4300008: tree
+    10800000: Lamp
+    10800002: Point
+    10800004: Sun
   materials:
     importMaterials: 1
     materialName: 0
