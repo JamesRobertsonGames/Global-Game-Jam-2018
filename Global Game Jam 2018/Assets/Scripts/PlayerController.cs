@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour {
     public float xForce = 0.0F;
     public float yForce = 0.0F;
     public float maxForce = 30.0F;
+    string b_state = "Flying";
 
     float rotationX = 0F;
     float rotationY = 0F;
@@ -80,6 +81,8 @@ public class PlayerController : MonoBehaviour {
         
             if (Physics.Raycast(transform.position, transform.forward, out hit, 3000.0F))
             {
+                xForce = 0;
+                yForce = 0;
                 Transform objectHit = hit.transform;
                 Debug.DrawRay(transform.position, transform.forward,Color.yellow,1000000);
                 transform.position = Vector3.MoveTowards(transform.position, hit.point, 200 * Time.deltaTime);
@@ -214,8 +217,8 @@ public class PlayerController : MonoBehaviour {
     void Start()
     {
         Rigidbody rb = GetComponent<Rigidbody>();
-        //if (rb)
-        //    rb.freezeRotation = true;
+        if (rb)
+            rb.freezeRotation = true;
         originalRotation = transform.localRotation;
         Cursor.visible = false;
     }
