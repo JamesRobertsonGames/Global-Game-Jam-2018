@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BatMovement : MonoBehaviour
 {
@@ -11,6 +12,11 @@ public class BatMovement : MonoBehaviour
 
     private bool isAlive = true;
     private Vector3 velocity;
+    
+    public AudioSource squeak1;
+    public AudioSource squeak2;
+
+    System.Random rnd = new System.Random();
 
     private void Update()
     {
@@ -61,5 +67,28 @@ public class BatMovement : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(transform.position, CollisionRadius);
+    }
+    
+    private void OnCollisionEnter(Collision other)
+    {
+        
+        if (rnd.Next(1,2) == 1)
+        {
+            squeak1.Play();          
+        }
+        else
+        {
+            squeak2.Play();
+        }
+        
+
+        var collider_object = other.gameObject.tag;
+        if (collider_object == "Win"){
+            SceneManager.LoadScene("GameWin");
+        }
+        if (collider_object == "Lose")
+        {
+            SceneManager.LoadScene("GameLose");
+        }
     }
 }
