@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour {
 
@@ -33,7 +35,66 @@ public class PlayerController : MonoBehaviour {
 
     Quaternion originalRotation;
 
-    void Update()
+    void BatState()
+    {
+        string b_state = "Flying";
+
+        if (Input.GetMouseButton(0))
+        {
+            b_state = "Landing";
+        }
+        
+        switch (b_state)
+        {
+                case "Flying":
+                    Flying();
+                    break;
+                case "Landing":
+                    Landing();
+                    break;
+                case "Landed":
+                    Landed();
+                    break;
+                case "Sonaring":
+                    Sonaring();
+                    break;
+        }
+    }
+
+    void Landed()
+    {
+            
+    }
+
+    void Sonaring()
+    {
+        
+    }
+
+    void Landing()
+    {
+        if (Input.GetMouseButton(0))
+        {
+            RaycastHit hit;
+            Ray ray;
+        
+            if (Physics.Raycast(transform.position, transform.forward, out hit, 3000.0F))
+            {
+                Transform objectHit = hit.transform;
+                Debug.DrawRay(transform.position, transform.forward,Color.yellow,1000000);
+                transform.position = Vector3.MoveTowards(transform.position, hit.point, 200 * Time.deltaTime);
+                if (transform.position == objectHit.position)
+                {
+                    
+                }
+                // Maybe add cool marker feature
+                // GameObject.Instantiate(InstanciatedObject,hit.point,InstanciatedObject.transform.rotation);
+                
+            }
+        }
+    }
+
+    void Flying()
     {
         xForce += Input.GetAxisRaw("Horizontal");
         yForce += Input.GetAxisRaw("Vertical");
@@ -145,11 +206,16 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
+    void Update()
+    {
+       BatState();
+    }
+
     void Start()
     {
         Rigidbody rb = GetComponent<Rigidbody>();
-        if (rb)
-            rb.freezeRotation = true;
+        //if (rb)
+        //    rb.freezeRotation = true;
         originalRotation = transform.localRotation;
         Cursor.visible = false;
     }
