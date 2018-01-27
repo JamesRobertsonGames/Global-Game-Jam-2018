@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour {
@@ -10,6 +9,11 @@ public class PlayerController : MonoBehaviour {
     public RotationAxes axes = RotationAxes.MouseXAndY;
     public float sensitivityX = 15F;
     public float sensitivityY = 15F;
+
+    public AudioSource squeak1;
+    public AudioSource squeak2;
+
+    System.Random rnd = new System.Random();
 
     public float minimumX = -360F;
     public float maximumX = 360F;
@@ -21,8 +25,6 @@ public class PlayerController : MonoBehaviour {
     public float xForce = 0.0F;
     public float yForce = 0.0F;
     public float maxForce = 30.0F;
-    string b_state = "Flying";
-    public GameObject colliderSpawn;
 
     float rotationX = 0F;
     float rotationY = 0F;
@@ -37,69 +39,7 @@ public class PlayerController : MonoBehaviour {
 
     Quaternion originalRotation;
 
-    void BatState()
-    {
-        string b_state = "Flying";
-
-        if (Input.GetMouseButton(0))
-        {
-            b_state = "Landing";
-        }
-        
-        switch (b_state)
-        {
-                case "Flying":
-                    Flying();
-                    break;
-                case "Landing":
-                    Landing();
-                    break;
-                case "Landed":
-                    Landed();
-                    break;
-                case "Sonaring":
-                    Sonaring();
-                    break;
-        }
-    }
-
-    void Landed()
-    {
-            
-    }
-
-    void Sonaring()
-    {
-        
-    }
-
-    void Landing()
-    {
-        if (Input.GetMouseButton(0))
-        {
-            RaycastHit hit;
-            Ray ray;
-        
-            if (Physics.Raycast(transform.position, transform.forward, out hit, 3000.0F))
-            {
-                xForce = 0;
-                yForce = 0;
-                Transform objectHit = hit.transform;
-                Debug.DrawRay(transform.position, transform.forward,Color.yellow,1000000);
-                transform.position = Vector3.MoveTowards(transform.position, hit.point, 200 * Time.deltaTime);
-                // GameObject.Instantiate(colliderSpawn,hit.point,Quaternion(0,0,0,0))
-                if (transform.position == objectHit.position)
-                {
-                    
-                }
-                // Maybe add cool marker feature
-                // GameObject.Instantiate(InstanciatedObject,hit.point,InstanciatedObject.transform.rotation);
-                
-            }
-        }
-    }
-
-    void Flying()
+    void Update()
     {
         xForce += Input.GetAxisRaw("Horizontal");
         yForce += Input.GetAxisRaw("Vertical");
@@ -211,11 +151,6 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
-    void Update()
-    {
-       BatState();
-    }
-
     void Start()
     {
         Rigidbody rb = GetComponent<Rigidbody>();
@@ -223,6 +158,9 @@ public class PlayerController : MonoBehaviour {
             rb.freezeRotation = true;
         originalRotation = transform.localRotation;
         Cursor.visible = false;
+        //var squeaks = GetComponents(typeof(AudioSource));
+        //squeak1 = squeaks[0];
+        //squeak2 = squeaks[1];
     }
 
     public static float ClampAngle(float angle, float min, float max)
@@ -240,5 +178,28 @@ public class PlayerController : MonoBehaviour {
             }
         }
         return Mathf.Clamp(angle, min, max);
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        
+        if (rnd.Next(1,2) == 1)
+        {
+            squeak1.Play();          
+        }
+        else
+        {
+            squeak2.Play();
+        }
+        
+
+        var collider_object = other.gameObject.tag;
+        if (collider_object == "Win"){
+            SceneManager.LoadScene("GameWin");
+        }
+        if (collider_object == "Lose")
+        {
+            SceneManager.LoadScene("GameLose");
+        }
     }
 }
