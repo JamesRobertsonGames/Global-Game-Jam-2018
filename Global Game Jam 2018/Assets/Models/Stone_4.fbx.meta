@@ -1,22 +1,19 @@
 fileFormatVersion: 2
-guid: 02e5217f6a2fbd849a55f7b6eaa7f461
-timeCreated: 1517016415
+guid: 51fa081295a4add41ad6cdb8a8d3d455
+timeCreated: 1516997016
 licenseType: Free
 ModelImporter:
-  serializedVersion: 22
+  serializedVersion: 21
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: Stones
     2300000: //RootNode
     3300000: //RootNode
     4300000: Stone_4
-  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
     materialSearch: 1
-    materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -29,7 +26,6 @@ ModelImporter:
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
-    importAnimatedCustomProperties: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
@@ -54,8 +50,6 @@ ModelImporter:
     optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
-    preserveHierarchy: 0
-    indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
