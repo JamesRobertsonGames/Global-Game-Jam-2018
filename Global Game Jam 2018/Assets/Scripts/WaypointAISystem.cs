@@ -6,7 +6,9 @@ using UnityEngine;
 public class WaypointAISystem : MonoBehaviour
 {
 	public List<GameObject> Waypoints;
+	[Range(1,50)]
 	public float MoveTowardsSpeed;
+	[Range(0, 8)]
 	public float PauseTime;
 	private float StorePauseTime;
 	private int CurrentWaypoint;
