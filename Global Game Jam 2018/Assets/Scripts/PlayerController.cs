@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour {
 
@@ -19,6 +21,8 @@ public class PlayerController : MonoBehaviour {
     public float xForce = 0.0F;
     public float yForce = 0.0F;
     public float maxForce = 30.0F;
+    string b_state = "Flying";
+    public GameObject colliderSpawn;
 
     float rotationX = 0F;
     float rotationY = 0F;
@@ -33,7 +37,69 @@ public class PlayerController : MonoBehaviour {
 
     Quaternion originalRotation;
 
-    void Update()
+    void BatState()
+    {
+        string b_state = "Flying";
+
+        if (Input.GetMouseButton(0))
+        {
+            b_state = "Landing";
+        }
+        
+        switch (b_state)
+        {
+                case "Flying":
+                    Flying();
+                    break;
+                case "Landing":
+                    Landing();
+                    break;
+                case "Landed":
+                    Landed();
+                    break;
+                case "Sonaring":
+                    Sonaring();
+                    break;
+        }
+    }
+
+    void Landed()
+    {
+            
+    }
+
+    void Sonaring()
+    {
+        
+    }
+
+    void Landing()
+    {
+        if (Input.GetMouseButton(0))
+        {
+            RaycastHit hit;
+            Ray ray;
+        
+            if (Physics.Raycast(transform.position, transform.forward, out hit, 3000.0F))
+            {
+                xForce = 0;
+                yForce = 0;
+                Transform objectHit = hit.transform;
+                Debug.DrawRay(transform.position, transform.forward,Color.yellow,1000000);
+                transform.position = Vector3.MoveTowards(transform.position, hit.point, 200 * Time.deltaTime);
+                // GameObject.Instantiate(colliderSpawn,hit.point,Quaternion(0,0,0,0))
+                if (transform.position == objectHit.position)
+                {
+                    
+                }
+                // Maybe add cool marker feature
+                // GameObject.Instantiate(InstanciatedObject,hit.point,InstanciatedObject.transform.rotation);
+                
+            }
+        }
+    }
+
+    void Flying()
     {
         xForce += Input.GetAxisRaw("Horizontal");
         yForce += Input.GetAxisRaw("Vertical");
@@ -143,6 +209,11 @@ public class PlayerController : MonoBehaviour {
             Quaternion yQuaternion = Quaternion.AngleAxis(rotAverageY, Vector3.left);
             transform.localRotation = originalRotation * yQuaternion;
         }
+    }
+
+    void Update()
+    {
+       BatState();
     }
 
     void Start()
