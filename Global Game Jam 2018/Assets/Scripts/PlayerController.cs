@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour {
     public float yForce = 0.0F;
     public float maxForce = 30.0F;
     string b_state = "Flying";
+    public GameObject colliderSpawn;
 
     float rotationX = 0F;
     float rotationY = 0F;
@@ -86,6 +87,7 @@ public class PlayerController : MonoBehaviour {
                 Transform objectHit = hit.transform;
                 Debug.DrawRay(transform.position, transform.forward,Color.yellow,1000000);
                 transform.position = Vector3.MoveTowards(transform.position, hit.point, 200 * Time.deltaTime);
+                // GameObject.Instantiate(colliderSpawn,hit.point,Quaternion(0,0,0,0))
                 if (transform.position == objectHit.position)
                 {
                     
