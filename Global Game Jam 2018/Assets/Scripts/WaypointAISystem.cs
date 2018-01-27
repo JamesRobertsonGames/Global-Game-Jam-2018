@@ -69,9 +69,4 @@ public class WaypointAISystem : MonoBehaviour
 	{
 		TimerOn = true;
 	}
-
-	void LateUpdate()
-	{
-		
-	}
 }
