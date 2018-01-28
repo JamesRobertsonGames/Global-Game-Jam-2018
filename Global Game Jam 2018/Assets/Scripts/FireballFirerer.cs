@@ -51,14 +51,17 @@ public class FireballFirerer : MonoBehaviour
 
 		if (tempFireball.transform.position == shooting_player_position)
 		{
-			Destroy(tempFireball);
+			tempFireball.active = false;
 		}
 		
 		if (FireballTimer <= 0.0f)
 		{
 			FireballTimer = FireballTimelimit;
 			TravellingFireball = false;
-			Destroy(tempFireball);
+			if (tempFireball)
+			{
+				Destroy(tempFireball);
+			}
 		}
 	}
 	
