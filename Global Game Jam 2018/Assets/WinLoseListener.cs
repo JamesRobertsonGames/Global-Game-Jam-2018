@@ -31,6 +31,7 @@ public class WinLoseListener : MonoBehaviour
         else
         {
             // lose
+            SceneManager.LoadScene(0);
         }
     }
 }
