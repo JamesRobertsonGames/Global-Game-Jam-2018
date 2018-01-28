@@ -89,7 +89,7 @@ public class SonarParticleSystem : SingletonMonoBehaviour<SonarParticleSystem>
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetButtonDown("Sonar"))
         {
             EmitSonar(transform.position, transform.forward);
         }
