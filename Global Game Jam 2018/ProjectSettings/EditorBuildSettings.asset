@@ -4,4 +4,13 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/AP/MainMenu.unity
+    guid: 4a944209e4b44ed43abd6ed3a7edaa45
+  - enabled: 1
+    path: Assets/Scenes/JR3/sonarscene.unity
+    guid: 682e7b9d411c9a945a33766d216ce1a7
+  - enabled: 1
+    path: Assets/Scenes/Aubrey/bigscene.unity
+    guid: e0ae0843f2a0c534d871f46111ff7eb6

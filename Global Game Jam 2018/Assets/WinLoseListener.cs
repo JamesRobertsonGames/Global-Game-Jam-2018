@@ -1,7 +1,9 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class WinLoseListener : MonoBehaviour
 {
+    public int levelNumber;
 	private void Start ()
     {
         BatMovement.Instance.OnBatCollided += OnBatCollided;	
@@ -11,7 +13,16 @@ public class WinLoseListener : MonoBehaviour
     {
         if (other.tag == "portal")
         {
-            // win
+            if (levelNumber == 1)
+            {
+                SceneManager.LoadScene(2);
+            }
+            else
+            {
+                // win
+                SceneManager.LoadScene(0);
+            }
+
         }
         else if (other.tag == "fireball")
         {
