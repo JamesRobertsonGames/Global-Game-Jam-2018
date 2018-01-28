@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class BatMovement : MonoBehaviour
+public class BatMovement : SingletonMonoBehaviour<BatMovement>
 {
     public bool DrawGizmos = false;
     public float TimeToApex = 1.5f;
@@ -13,7 +13,10 @@ public class BatMovement : MonoBehaviour
     private Vector3 velocity;
     private Animator anim;
 
-    private void Awake()
+    public delegate void BatCollisionListener(Vector3 point, GameObject other);
+    public event BatCollisionListener OnBatCollided;
+
+    private void Start()
     {
         anim = GetComponentInChildren<Animator>();
     }
@@ -23,7 +26,8 @@ public class BatMovement : MonoBehaviour
         if (isAlive)
         {
             Vector3 collision;
-            if (BatCollided(out collision))
+            GameObject other;
+            if (BatCollided(out collision, out other))
             {
                 // Stick to wall?
                 // ...
@@ -33,6 +37,12 @@ public class BatMovement : MonoBehaviour
                 SoundManager.Instance.StopThemeLoop();
                 SoundManager.Instance.PlayRandomSqueak();
                 SoundManager.Instance.PlayLose();
+
+                if (OnBatCollided != null)
+                {
+                    OnBatCollided.Invoke(collision, other);
+                }
+
                 return;
             }
 
@@ -55,17 +65,19 @@ public class BatMovement : MonoBehaviour
         }
     }
 
-    private bool BatCollided(out Vector3 collision)
+    private bool BatCollided(out Vector3 collision, out GameObject other)
     {
         var colliders = Physics.OverlapSphere(transform.position, CollisionRadius, CollisionMask);
 
         if (colliders.Length > 0)
         {
             collision = colliders[0].ClosestPoint(transform.position);
+            other = colliders[0].gameObject;
             return true;
         }
 
         collision = default(Vector3);
+        other = null;
         return false;
     }
 
