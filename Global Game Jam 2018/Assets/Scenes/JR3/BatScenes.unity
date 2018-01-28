@@ -890,7 +890,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
+  far clip plane: 100000
   field of view: 60
   orthographic: 0
   orthographic size: 5
@@ -1739,6 +1739,29 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: da187a9b20096524c9de77613fe100dd, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1776156367 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1884873641518346, guid: da187a9b20096524c9de77613fe100dd,
+    type: 2}
+  m_PrefabInternal: {fileID: 1776156366}
+--- !u!114 &1776156368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1776156367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a3fcc98bf283424d9d9a6654ca30eee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 1847338034}
+  Mage: {fileID: 1776156367}
+  Fireball: {fileID: 1290387805614364, guid: f565f77b21880da45b7513358b03c9e9, type: 2}
+  FireballTimer: 7
+  MinDistance: 1500
+  FireballSpeed: 500
+  Offset: {x: 0, y: 20, z: 0}
 --- !u!1 &1801430250
 GameObject:
   m_ObjectHideFlags: 0
