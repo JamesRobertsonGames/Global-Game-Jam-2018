@@ -11,6 +11,12 @@ public class BatMovement : MonoBehaviour
 
     private bool isAlive = true;
     private Vector3 velocity;
+    private Animator anim;
+
+    private void Awake()
+    {
+        anim = GetComponentInChildren<Animator>();
+    }
 
     private void Update()
     {
@@ -34,6 +40,7 @@ public class BatMovement : MonoBehaviour
                 float flapVelocity = Mathf.Abs(gravity) * TimeToApex;
                 velocity.z = flapVelocity * 0.75f;
                 velocity.y = flapVelocity;
+                anim.SetTrigger("Flap");
             }
             else
             {
