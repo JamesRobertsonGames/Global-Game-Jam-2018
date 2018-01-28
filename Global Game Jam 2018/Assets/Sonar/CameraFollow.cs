@@ -28,7 +28,7 @@ public class CameraFollow : MonoBehaviour
         }
         else
         {
-            transform.position = Vector3.Lerp(transform.position, CameraBounds.ClosestPoint(idealPosition), Time.deltaTime);
+            transform.position = Vector3.Lerp(transform.position, CameraBounds.ClosestPoint(idealPosition), Time.deltaTime * BatMovement.Instance.velocity.sqrMagnitude);
         }
 	}
 

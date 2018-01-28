@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Linq;
 
 public class BatMovement : SingletonMonoBehaviour<BatMovement>
 {
@@ -8,9 +9,11 @@ public class BatMovement : SingletonMonoBehaviour<BatMovement>
     public float CollisionRadius = 1.0f;
     public LayerMask CollisionMask;
     public float JumpDelay = 2.0f;
+    public bool isAlive = true;
+    public float BounceBackForce = 5.0f;
+    public Bounds CollisionBox;
 
-    private bool isAlive = true;
-    private Vector3 velocity;
+    public Vector3 velocity;
     private Animator anim;
 
     public delegate void BatCollisionListener(Vector3 point, GameObject other);
@@ -29,39 +32,31 @@ public class BatMovement : SingletonMonoBehaviour<BatMovement>
             GameObject other;
             if (BatCollided(out collision, out other))
             {
-                // Stick to wall?
-                // ...
-
-                // Fall down dead for now
-                isAlive = false;
-                SoundManager.Instance.StopThemeLoop();
-                SoundManager.Instance.PlayRandomSqueak();
-                SoundManager.Instance.PlayLose();
-
                 if (OnBatCollided != null)
                 {
                     OnBatCollided.Invoke(collision, other);
                 }
-
                 return;
-            }
-
-            float gravity = (-2 * FlapHeight) / Mathf.Pow(TimeToApex, 2);
-
-            if (Input.GetKeyDown(KeyCode.LeftShift))
-            {
-                float flapVelocity = Mathf.Abs(gravity) * TimeToApex;
-                velocity.z = flapVelocity * 0.75f;
-                velocity.y = flapVelocity;
-                anim.SetTrigger("Flap");
-                SoundManager.Instance.PlayRandomSqueak();
             }
             else
             {
-                velocity.y += gravity * Time.deltaTime;
+                float gravity = (-2 * FlapHeight) / Mathf.Pow(TimeToApex, 2);
+
+                if (Input.GetButtonDown("Flap"))
+                {
+                    float flapVelocity = Mathf.Abs(gravity) * TimeToApex;
+                    velocity.z = flapVelocity * 0.75f;
+                    velocity.y = flapVelocity;
+                    anim.SetTrigger("Flap");
+                    SoundManager.Instance.PlayRandomSqueak();
+                }
+                else
+                {
+                    velocity.y += gravity * Time.deltaTime;
+                }
             }
 
-            transform.Translate(velocity * Time.deltaTime, Space.Self);
+            transform.Translate((velocity) * Time.deltaTime, Space.Self);
         }
     }
 
