@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class BatMovement : MonoBehaviour
+public class BatMovement : SingletonMonoBehaviour<BatMovement>
 {
     public bool DrawGizmos = false;
     public float TimeToApex = 1.5f;
@@ -12,24 +11,38 @@ public class BatMovement : MonoBehaviour
 
     private bool isAlive = true;
     private Vector3 velocity;
-    
-    public AudioSource squeak1;
-    public AudioSource squeak2;
+    private Animator anim;
 
-    System.Random rnd = new System.Random();
+    public delegate void BatCollisionListener(Vector3 point, GameObject other);
+    public event BatCollisionListener OnBatCollided;
+
+    private void Start()
+    {
+        anim = GetComponentInChildren<Animator>();
+    }
 
     private void Update()
     {
         if (isAlive)
         {
             Vector3 collision;
-            if (BatCollided(out collision))
+            GameObject other;
+            if (BatCollided(out collision, out other))
             {
                 // Stick to wall?
                 // ...
 
                 // Fall down dead for now
                 isAlive = false;
+                SoundManager.Instance.StopThemeLoop();
+                SoundManager.Instance.PlayRandomSqueak();
+                SoundManager.Instance.PlayLose();
+
+                if (OnBatCollided != null)
+                {
+                    OnBatCollided.Invoke(collision, other);
+                }
+
                 return;
             }
 
@@ -40,6 +53,8 @@ public class BatMovement : MonoBehaviour
                 float flapVelocity = Mathf.Abs(gravity) * TimeToApex;
                 velocity.z = flapVelocity * 0.75f;
                 velocity.y = flapVelocity;
+                anim.SetTrigger("Flap");
+                SoundManager.Instance.PlayRandomSqueak();
             }
             else
             {
@@ -50,45 +65,24 @@ public class BatMovement : MonoBehaviour
         }
     }
 
-    private bool BatCollided(out Vector3 collision)
+    private bool BatCollided(out Vector3 collision, out GameObject other)
     {
         var colliders = Physics.OverlapSphere(transform.position, CollisionRadius, CollisionMask);
 
         if (colliders.Length > 0)
         {
             collision = colliders[0].ClosestPoint(transform.position);
+            other = colliders[0].gameObject;
             return true;
         }
 
         collision = default(Vector3);
+        other = null;
         return false;
     }
 
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(transform.position, CollisionRadius);
-    }
-    
-    private void OnCollisionEnter(Collision other)
-    {
-        
-        if (rnd.Next(1,2) == 1)
-        {
-            squeak1.Play();          
-        }
-        else
-        {
-            squeak2.Play();
-        }
-        
-
-        var collider_object = other.gameObject.tag;
-        if (collider_object == "Win"){
-            SceneManager.LoadScene("GameWin");
-        }
-        if (collider_object == "Lose")
-        {
-            SceneManager.LoadScene("GameLose");
-        }
     }
 }
