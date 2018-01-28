@@ -1,0 +1,160 @@
+fileFormatVersion: 2
+guid: e55f6eef242e3de4da274789614d6b55
+timeCreated: 1517089966
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: arm.l
+    100004: arm.r
+    100006: arm_IK.l
+    100008: arm_IK.l_end
+    100010: arm_IK.r
+    100012: arm_IK.r_end
+    100014: elbow_pole.l
+    100016: elbow_pole.l_end
+    100018: elbow_pole.r
+    100020: elbow_pole.r_end
+    100022: foot_IK.l
+    100024: foot_IK.l_end
+    100026: foot_IK.r
+    100028: foot_IK.r_end
+    100030: forearm.l
+    100032: forearm.l_end
+    100034: forearm.r
+    100036: forearm.r_end
+    100038: head
+    100040: head_end
+    100042: hip
+    100044: knee_pole.l
+    100046: knee_pole.l_end
+    100048: knee_pole.r
+    100050: knee_pole.r_end
+    100052: Mage
+    100054: Mage_rig
+    100056: shin.l
+    100058: shin.l_end
+    100060: shin.r
+    100062: shin.r_end
+    100064: spine
+    100066: thigh.l
+    100068: thigh.r
+    400000: //RootNode
+    400002: arm.l
+    400004: arm.r
+    400006: arm_IK.l
+    400008: arm_IK.l_end
+    400010: arm_IK.r
+    400012: arm_IK.r_end
+    400014: elbow_pole.l
+    400016: elbow_pole.l_end
+    400018: elbow_pole.r
+    400020: elbow_pole.r_end
+    400022: foot_IK.l
+    400024: foot_IK.l_end
+    400026: foot_IK.r
+    400028: foot_IK.r_end
+    400030: forearm.l
+    400032: forearm.l_end
+    400034: forearm.r
+    400036: forearm.r_end
+    400038: head
+    400040: head_end
+    400042: hip
+    400044: knee_pole.l
+    400046: knee_pole.l_end
+    400048: knee_pole.r
+    400050: knee_pole.r_end
+    400052: Mage
+    400054: Mage_rig
+    400056: shin.l
+    400058: shin.l_end
+    400060: shin.r
+    400062: shin.r_end
+    400064: spine
+    400066: thigh.l
+    400068: thigh.r
+    2300000: Mage
+    3300000: Mage
+    4300000: Mage
+    7400000: Mage_rig|CastFireball
+    9500000: //RootNode
+    10800000: //RootNode
+    13700000: Mage
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: "Invalid Avatar Rig Configuration. Missing or invalid transform:\n\tRequired
+      human bone 'LeftFoot' not found\n"
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,414 @@
+fileFormatVersion: 2
+guid: 72ddc7d6f65aff8409ff00e024fe79f8
+timeCreated: 1517091907
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: arm.l
+    100002: arm.l 1
+    100004: arm.r
+    100006: arm.r 1
+    100008: arm_IK.l
+    100010: arm_IK.l 1
+    100012: arm_IK.l_end
+    100014: arm_IK.l_end 1
+    100016: arm_IK.r
+    100018: arm_IK.r 1
+    100020: arm_IK.r_end
+    100022: arm_IK.r_end 1
+    100024: Camera
+    100026: Cube
+    100028: Cylinder
+    100030: elbow_pole.l
+    100032: elbow_pole.l 1
+    100034: elbow_pole.l_end
+    100036: elbow_pole.l_end 1
+    100038: elbow_pole.r
+    100040: elbow_pole.r 1
+    100042: elbow_pole.r_end
+    100044: elbow_pole.r_end 1
+    100046: foot_IK.l
+    100048: foot_IK.l 1
+    100050: foot_IK.l_end
+    100052: foot_IK.l_end 1
+    100054: foot_IK.r
+    100056: foot_IK.r 1
+    100058: foot_IK.r_end
+    100060: foot_IK.r_end 1
+    100062: forearm.l
+    100064: forearm.l 1
+    100066: forearm.l_end
+    100068: forearm.l_end 1
+    100070: forearm.r
+    100072: forearm.r 1
+    100074: forearm.r_end
+    100076: forearm.r_end 1
+    100078: Group1195
+    100080: Group14366
+    100082: Group16067
+    100084: Group244
+    100086: Group31072
+    100088: Group32838
+    100090: Group32839
+    100092: Group46060
+    100094: Group47162
+    100096: Group47163
+    100098: Group47164
+    100100: Group50176
+    100102: Group61143
+    100104: Group64930
+    100106: Group64975
+    100108: Group64990
+    100110: Group65005
+    100112: Group65020
+    100114: Group65035
+    100116: Group65050
+    100118: Group65125
+    100120: Group65140
+    100122: Group65155
+    100124: Group65170
+    100126: Group65185
+    100128: Group65440
+    100130: Group65455
+    100132: Group65470
+    100134: Group65485
+    100136: Group65500
+    100138: Group65515
+    100140: head
+    100142: head 1
+    100144: head_end
+    100146: head_end 1
+    100148: hip
+    100150: hip 1
+    100152: knee_pole.l
+    100154: knee_pole.l 1
+    100156: knee_pole.l_end
+    100158: knee_pole.l_end 1
+    100160: knee_pole.r
+    100162: knee_pole.r 1
+    100164: knee_pole.r_end
+    100166: knee_pole.r_end 1
+    100168: Lamp
+    100170: Mage
+    100172: Mage.001
+    100174: Mage_rig
+    100176: Mage_rig.001
+    100178: Plane
+    100180: Portal
+    100182: //RootNode
+    100184: shin.l
+    100186: shin.l 1
+    100188: shin.l_end
+    100190: shin.l_end 1
+    100192: shin.r
+    100194: shin.r 1
+    100196: shin.r_end
+    100198: shin.r_end 1
+    100200: spine
+    100202: spine 1
+    100204: thigh.l
+    100206: thigh.l 1
+    100208: thigh.r
+    100210: thigh.r 1
+    400000: arm.l
+    400002: arm.l 1
+    400004: arm.r
+    400006: arm.r 1
+    400008: arm_IK.l
+    400010: arm_IK.l 1
+    400012: arm_IK.l_end
+    400014: arm_IK.l_end 1
+    400016: arm_IK.r
+    400018: arm_IK.r 1
+    400020: arm_IK.r_end
+    400022: arm_IK.r_end 1
+    400024: Camera
+    400026: Cube
+    400028: Cylinder
+    400030: elbow_pole.l
+    400032: elbow_pole.l 1
+    400034: elbow_pole.l_end
+    400036: elbow_pole.l_end 1
+    400038: elbow_pole.r
+    400040: elbow_pole.r 1
+    400042: elbow_pole.r_end
+    400044: elbow_pole.r_end 1
+    400046: foot_IK.l
+    400048: foot_IK.l 1
+    400050: foot_IK.l_end
+    400052: foot_IK.l_end 1
+    400054: foot_IK.r
+    400056: foot_IK.r 1
+    400058: foot_IK.r_end
+    400060: foot_IK.r_end 1
+    400062: forearm.l
+    400064: forearm.l 1
+    400066: forearm.l_end
+    400068: forearm.l_end 1
+    400070: forearm.r
+    400072: forearm.r 1
+    400074: forearm.r_end
+    400076: forearm.r_end 1
+    400078: Group1195
+    400080: Group14366
+    400082: Group16067
+    400084: Group244
+    400086: Group31072
+    400088: Group32838
+    400090: Group32839
+    400092: Group46060
+    400094: Group47162
+    400096: Group47163
+    400098: Group47164
+    400100: Group50176
+    400102: Group61143
+    400104: Group64930
+    400106: Group64975
+    400108: Group64990
+    400110: Group65005
+    400112: Group65020
+    400114: Group65035
+    400116: Group65050
+    400118: Group65125
+    400120: Group65140
+    400122: Group65155
+    400124: Group65170
+    400126: Group65185
+    400128: Group65440
+    400130: Group65455
+    400132: Group65470
+    400134: Group65485
+    400136: Group65500
+    400138: Group65515
+    400140: head
+    400142: head 1
+    400144: head_end
+    400146: head_end 1
+    400148: hip
+    400150: hip 1
+    400152: knee_pole.l
+    400154: knee_pole.l 1
+    400156: knee_pole.l_end
+    400158: knee_pole.l_end 1
+    400160: knee_pole.r
+    400162: knee_pole.r 1
+    400164: knee_pole.r_end
+    400166: knee_pole.r_end 1
+    400168: Lamp
+    400170: Mage
+    400172: Mage.001
+    400174: Mage_rig
+    400176: Mage_rig.001
+    400178: Plane
+    400180: Portal
+    400182: //RootNode
+    400184: shin.l
+    400186: shin.l 1
+    400188: shin.l_end
+    400190: shin.l_end 1
+    400192: shin.r
+    400194: shin.r 1
+    400196: shin.r_end
+    400198: shin.r_end 1
+    400200: spine
+    400202: spine 1
+    400204: thigh.l
+    400206: thigh.l 1
+    400208: thigh.r
+    400210: thigh.r 1
+    2000000: Camera
+    2300000: Cube
+    2300002: Cylinder
+    2300004: Group1195
+    2300006: Group14366
+    2300008: Group16067
+    2300010: Group244
+    2300012: Group31072
+    2300014: Group32838
+    2300016: Group32839
+    2300018: Group46060
+    2300020: Group47162
+    2300022: Group47163
+    2300024: Group47164
+    2300026: Group50176
+    2300028: Group61143
+    2300030: Group64930
+    2300032: Group64975
+    2300034: Group64990
+    2300036: Group65005
+    2300038: Group65020
+    2300040: Group65035
+    2300042: Group65050
+    2300044: Group65125
+    2300046: Group65140
+    2300048: Group65155
+    2300050: Group65170
+    2300052: Group65185
+    2300054: Group65440
+    2300056: Group65455
+    2300058: Group65470
+    2300060: Group65485
+    2300062: Group65500
+    2300064: Group65515
+    2300066: Plane
+    2300068: Portal
+    3300000: Cube
+    3300002: Cylinder
+    3300004: Group1195
+    3300006: Group14366
+    3300008: Group16067
+    3300010: Group244
+    3300012: Group31072
+    3300014: Group32838
+    3300016: Group32839
+    3300018: Group46060
+    3300020: Group47162
+    3300022: Group47163
+    3300024: Group47164
+    3300026: Group50176
+    3300028: Group61143
+    3300030: Group64930
+    3300032: Group64975
+    3300034: Group64990
+    3300036: Group65005
+    3300038: Group65020
+    3300040: Group65035
+    3300042: Group65050
+    3300044: Group65125
+    3300046: Group65140
+    3300048: Group65155
+    3300050: Group65170
+    3300052: Group65185
+    3300054: Group65440
+    3300056: Group65455
+    3300058: Group65470
+    3300060: Group65485
+    3300062: Group65500
+    3300064: Group65515
+    3300066: Plane
+    3300068: Portal
+    4300000: Mage.001
+    4300002: Cylinder
+    4300004: Cube
+    4300006: Portal
+    4300008: Mage
+    4300010: Plane
+    4300012: Group65140
+    4300014: Group65170
+    4300016: Group47164
+    4300018: Group65005
+    4300020: Group65020
+    4300022: Group65440
+    4300024: Group47162
+    4300026: Group46060
+    4300028: Group31072
+    4300030: Group65185
+    4300032: Group32838
+    4300034: Group1195
+    4300036: Group32839
+    4300038: Group65455
+    4300040: Group65500
+    4300042: Group61143
+    4300044: Group64990
+    4300046: Group14366
+    4300048: Group65125
+    4300050: Group64930
+    4300052: Group50176
+    4300054: Group65485
+    4300056: Group65470
+    4300058: Group65050
+    4300060: Group244
+    4300062: Group16067
+    4300064: Group65155
+    4300066: Group65515
+    4300068: Group64975
+    4300070: Group65035
+    4300072: Group47163
+    7400000: Mage_rig.001|CastFireball
+    7400002: Mage_rig.001|CastFireball.001
+    7400004: Mage_rig.001|Mage_rig.001|Mage_rig|CastFireball|Mage_rig|CastFireball
+    7400006: Mage_rig.001|Mage_rig.002|Mage_rig|CastFireball|Mage_rig|CastFireball
+    7400008: Mage_rig|CastFireball
+    7400010: Mage_rig|CastFireball.001
+    7400012: Mage_rig|Mage_rig.001|Mage_rig|CastFireball|Mage_rig|CastFireball
+    7400014: Mage_rig|Mage_rig.002|Mage_rig|CastFireball|Mage_rig|CastFireball
+    9500000: //RootNode
+    10800000: Lamp
+    13700000: Mage
+    13700002: Mage.001
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

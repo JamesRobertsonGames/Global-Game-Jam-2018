@@ -3,7 +3,7 @@ guid: 405eba5f5096f7e489fdca2f4c0aa8ad
 timeCreated: 1517058268
 licenseType: Free
 ModelImporter:
-  serializedVersion: 19
+  serializedVersion: 21
   fileIDToRecycleName:
     100000: Armature
     100002: bat
@@ -19,6 +19,13 @@ ModelImporter:
     100022: wing.r
     100024: wing_pole.l
     100026: wing_pole.r
+    100028: forewing.l_end
+    100030: forewing.r_end
+    100032: forewing_IK.l_end
+    100034: forewing_IK.r_end
+    100036: head_end
+    100038: wing_pole.l_end
+    100040: wing_pole.r_end
     400000: Armature
     400002: bat
     400004: //RootNode
@@ -33,6 +40,13 @@ ModelImporter:
     400022: wing.r
     400024: wing_pole.l
     400026: wing_pole.r
+    400028: forewing.l_end
+    400030: forewing.r_end
+    400032: forewing_IK.l_end
+    400034: forewing_IK.r_end
+    400036: head_end
+    400038: wing_pole.l_end
+    400040: wing_pole.r_end
     4300000: bat
     7400000: Armature|ArmatureAction
     7400002: Armature|Fly
@@ -60,6 +74,7 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
+    extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
       name: Armature|Fly
@@ -95,7 +110,10 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
+    importVisibility: 0
     importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
@@ -111,6 +129,7 @@ ModelImporter:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
+    normalCalculationMode: 0
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
