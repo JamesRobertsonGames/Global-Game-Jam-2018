@@ -23,7 +23,7 @@ public class FireballFirerer : MonoBehaviour
 	void Start ()
 	{
 		FireballTimelimit = FireballTimer;
-		TravellingFireball = false;
+		TravellingFireball = false;	
 	}
 
 	void FireballTravel(Vector3 local_shooting_player_position)
