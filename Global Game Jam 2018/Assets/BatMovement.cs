@@ -30,6 +30,9 @@ public class BatMovement : MonoBehaviour
 
                 // Fall down dead for now
                 isAlive = false;
+                SoundManager.Instance.StopThemeLoop();
+                SoundManager.Instance.PlayRandomSqueak();
+                SoundManager.Instance.PlayLose();
                 return;
             }
 
@@ -41,6 +44,7 @@ public class BatMovement : MonoBehaviour
                 velocity.z = flapVelocity * 0.75f;
                 velocity.y = flapVelocity;
                 anim.SetTrigger("Flap");
+                SoundManager.Instance.PlayRandomSqueak();
             }
             else
             {
