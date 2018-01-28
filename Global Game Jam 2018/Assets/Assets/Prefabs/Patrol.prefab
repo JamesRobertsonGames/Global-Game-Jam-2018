@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 65511502820050072}
   - component: {fileID: 23695690918456336}
   - component: {fileID: 114320842538150348}
+  - component: {fileID: 114844350129790798}
   m_Layer: 0
   m_Name: Patrol
   m_TagString: Untagged
@@ -123,3 +124,21 @@ MonoBehaviour:
   - {fileID: 0}
   MoveTowardsSpeed: 50
   PauseTime: 3.5
+--- !u!114 &114844350129790798
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1884873641518346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a3fcc98bf283424d9d9a6654ca30eee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 0}
+  Mage: {fileID: 1884873641518346}
+  Fireball: {fileID: 1290387805614364, guid: f565f77b21880da45b7513358b03c9e9, type: 2}
+  FireballTimer: 7
+  MinDistance: 1500
+  FireballSpeed: 500
+  Offset: {x: 0, y: 20, z: 0}
